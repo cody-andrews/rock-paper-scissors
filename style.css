@@ -2,3 +2,7 @@ h2  {
 display: flex;
 justify-content: center;
 }
+
+body    {
+    background-color: #74d5dd;
+}

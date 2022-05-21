@@ -1,4 +1,26 @@
 
+// const optionBtn = document.querySelectorAll('div.optionBtn button');
+
+function returnRock(event) {
+    console.log('Rock');
+ }
+ function returnPaper(event) {
+    console.log('Paper')
+ }
+ function returnScissors(event) {
+     console.log('Scissors')
+ }
+
+const mybtnRock = document.getElementById('rock');
+const mybtnPaper = document.getElementById('paper');
+const mybtnScissors = document.getElementById('scissors');
+
+
+mybtnRock.addEventListener("click", returnRock);
+mybtnPaper.addEventListener("click", returnPaper);
+mybtnScissors.addEventListener("click", returnScissors);
+
+
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -25,13 +47,11 @@ function computerPlay() {
 
 function playerChoice() {
 
+    console.log(myButton);
 }
 
 function playRound(playerSelection, computerChoice) {
     // your code here!
   }
   
-  const playerSelection = "rock";
-  const computerSelection = computerPlay();
-  console.log(playRound(playerSelection, computerSelection));
 computerPlay()
