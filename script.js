@@ -1,57 +1,61 @@
 
-// const optionBtn = document.querySelectorAll('div.optionBtn button');
-
-function returnRock(event) {
-    console.log('Rock');
- }
- function returnPaper(event) {
-    console.log('Paper')
- }
- function returnScissors(event) {
-     console.log('Scissors')
- }
-
-const mybtnRock = document.getElementById('rock');
-const mybtnPaper = document.getElementById('paper');
-const mybtnScissors = document.getElementById('scissors');
-
-
-mybtnRock.addEventListener("click", returnRock);
-mybtnPaper.addEventListener("click", returnPaper);
-mybtnScissors.addEventListener("click", returnScissors);
-
-
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
+const buttons = document.querySelectorAll('button')
 
 function computerPlay() {
 
+    //function to generate a random number
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+    
+
     let randomNumber = getRandomInt(3);
-    console.log(randomNumber)
-   
+    
     if (randomNumber <= 0) {
-        computerChoice = 'Rock';
+        computerChoice = 'rock';
     }
 
     else if (randomNumber <= 1) {
-        computerChoice = 'Paper';
+        computerChoice = 'paper';
     }
 
     else {
-        computerChoice = 'Scissors';
+        computerChoice = 'scissors';
     }
-    console.log(computerChoice)
+    return computerChoice;
 }
 
-function playerChoice() {
-
-    console.log(myButton);
-}
-
-function playRound(playerSelection, computerChoice) {
+function playRound(playerChoice) {
     // your code here!
-  }
+    let result = '';
+    let computerChoice = computerPlay();
+
+    console.log(playerChoice);
+    console.log(computerChoice);
+
+        if ((playerChoice == 'rock' && computerChoice == 'scissors') ||
+        (playerChoice == 'scissors' && computerChoice == 'paper') ||
+        (playerChoice == 'paper' && computerChoice == 'rock')) {
+
+            result = 'Win';
+            console.log(result)
+
+        }
+
+        else if (playerChoice == computerChoice)    {
+            result = 'Tie';
+            console.log(result);
+        }
+
+        else {
+            result = 'Lose';
+            console.log(result);
+        }
+}
   
-computerPlay()
+
+  buttons.forEach(button =>{
+    button.addEventListener('click', function(){
+        playRound(button.value)
+    })
+})
