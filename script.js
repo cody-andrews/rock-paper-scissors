@@ -1,6 +1,9 @@
 
 const buttons = document.querySelectorAll('button')
 
+let playerScore = 0;
+let computerScore = 0;
+
 function computerPlay() {
 
     //function to generate a random number
@@ -33,26 +36,53 @@ function playRound(playerChoice) {
     console.log(playerChoice);
     console.log(computerChoice);
 
+
         if ((playerChoice == 'rock' && computerChoice == 'scissors') ||
         (playerChoice == 'scissors' && computerChoice == 'paper') ||
         (playerChoice == 'paper' && computerChoice == 'rock')) {
 
             result = 'Win';
-            console.log(result)
-
+            playerScore++
+            console.log(result);
+            console.log(playerScore, 'Player');
+            console.log(computerScore, 'Computer');
         }
 
         else if (playerChoice == computerChoice)    {
             result = 'Tie';
             console.log(result);
+            console.log(playerScore, 'Player');
+            console.log(computerScore, 'Computer');
         }
 
         else {
-            result = 'Lose';
-            console.log(result);
+             result = 'Lose';
+             computerScore++
+             console.log(result);
+             console.log(playerScore, 'Player');
+             console.log(computerScore, 'Computer');
         }
+
+        if (playerScore == 5)    {
+            console.log('Player has won!');
+            playerScore = 0;
+            computerScore = 0;
+        }
+
+        else if (computerScore == 5) {
+            console.log('Computer has won')
+            computerScore = 0;
+            playerScore = 0;
+        }
+    
 }
   
+function game() {
+    
+
+   
+
+}
 
   buttons.forEach(button =>{
     button.addEventListener('click', function(){
