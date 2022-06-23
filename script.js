@@ -1,6 +1,6 @@
 
 const buttons = document.querySelectorAll('button')
-const divResults = document.getElementById('results')
+const divResults = document.getElementById('roundResults')
 const playerResult = document.getElementById('playerResults')
 const computerResult = document.getElementById('computerResults')
 
@@ -47,10 +47,10 @@ function playRound(playerChoice) {
             playerScore++;
 
             divResults.innerHTML = ('Player Wins!');
-            playerResult.innerHTML = (playerScore);
-            computerResult.innerHTML = (computerScore);
+            playerResult.innerHTML = ('Player: ' + playerScore);
+            computerResult.innerHTML = ('Computer: ' + computerScore);
 
-            console.log(result);
+            console.log(result); 
             console.log(playerScore, 'Player');
             console.log(computerScore, 'Computer');
         }
@@ -59,9 +59,9 @@ function playRound(playerChoice) {
             result = 'Tie';
 
             divResults.innerHTML = ('It\'s a tie!');
-            playerResult.innerHTML = playerScore;
-            computerResult.innerHTML = computerScore;
-            
+            playerResult.innerHTML = ('Player: ' + playerScore);
+            computerResult.innerHTML = ('Computer: ' + computerScore);
+
 
             console.log(result);
             console.log(playerScore, 'Player');
@@ -72,8 +72,9 @@ function playRound(playerChoice) {
              result = 'Lose';
              computerScore++
              divResults.innerHTML = ('Computer Wins!');
-             playerResult.innerHTML = playerScore;
-            computerResult.innerHTML = computerScore;
+             playerResult.innerHTML = ('Player: ' + playerScore);
+            computerResult.innerHTML = ('Computer: ' + computerScore);
+
             
              console.log(result);
              console.log(playerScore, 'Player');
@@ -83,8 +84,9 @@ function playRound(playerChoice) {
         if (playerScore == 5)    {
             console.log('Player has won!');
             divResults.innerHTML = ('Player has won the game!');
-            playerResult.innerHTML = playerScore;
-            computerResult.innerHTML = computerScore;
+            playerResult.innerHTML = ('Player: ' + playerScore);
+            computerResult.innerHTML = ('Computer: ' + computerScore);
+
 
             window.alert('You have one the match!')
             
@@ -94,9 +96,10 @@ function playRound(playerChoice) {
 
         else if (computerScore == 5) {
             console.log('Computer has won')
-            divResults.innerHTML = ('The Computer has won the game!' + playerScore + computerChoice);
-            playerResult.innerHTML = playerScore;
-            computerResult.innerHTML = computerScore;
+            divResults.innerHTML = ('The Computer has won the game!');
+            playerResult.innerHTML = ('Player: ' + playerScore);
+            computerResult.innerHTML = ('Computer: ' + computerScore);
+
             
             window.alert('The Computer has won!');
             
