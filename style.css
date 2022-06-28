@@ -28,6 +28,16 @@ p   {
     justify-content: center;
 }
 
+/* #gameRules {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+  
+  #gameRules .letter {
+    display: inline-block;
+    line-height: 1em;
+  } */
+
 /* #playerResults, #computerResults    {
     display: flex;
     flex-direction: column;

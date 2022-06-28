@@ -1,11 +1,25 @@
 
-const buttons = document.querySelectorAll('button')
+const inputs = document.querySelectorAll('input')
 const divResults = document.getElementById('roundResults')
 const playerResult = document.getElementById('playerResults')
 const computerResult = document.getElementById('computerResults')
 
 let playerScore = 0;
 let computerScore = 0;
+
+// Animate Text in the gameRules paragraph 
+var i = 0;
+var txt = 'Welcome to a friendly game of Rock, Paper, Scissor. \nFirst to 5 wins. Click below to make your choice!'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("gameRules").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
 
 function computerPlay() {
 
@@ -115,8 +129,8 @@ function game() {
 
 }
 
-  buttons.forEach(button =>{
-    button.addEventListener('click', function(){
-        playRound(button.value)
+  inputs.forEach(input =>{
+    input.addEventListener('click', function(){
+        playRound(input.value)
     })
 })
