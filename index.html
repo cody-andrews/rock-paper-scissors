@@ -9,16 +9,25 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
-    
+   
 
 </head>
-<body onload="typeWriter()">
-    <h2>Rock, Papers, Scissors</h2>
+<body onload="typeWriter(txt)">
+    
+    <header>
+        <h2>Rock, Papers, Scissors</h2>
+    </header>
 
     
 
     <p id="gameRules"></p>
+
+
+    <div class="results">
+        <p id="playerResults">Player: 0</p>
+        <p id="computerResults">Computer: 0</p>
+    </div>
+
         <div class="optionBtn">
             <input type="image" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/raised-fist_medium-skin-tone_270a-1f3fd_1f3fd.png" value="rock"></button>
             <input type='image' src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/raised-back-of-hand_medium-skin-tone_1f91a-1f3fd_1f3fd.png' value="paper"></button>
@@ -26,15 +35,12 @@
         </div>
     
         <p id="roundResults"></p>
-        
-        <div class="results">
-            <p id="playerResults">Player: 0</p>
-            <p id="computerResults">Computer: 0</p>
-        </div>
-
        
 
-    <p id="demo"></p>
-
+    <footer class="footer">
+      Copyright &copy 2022 Cody Andrews 
+    </footer>
 </body>
+
+
 </html>

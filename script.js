@@ -3,13 +3,12 @@ const inputs = document.querySelectorAll('input')
 const divResults = document.getElementById('roundResults')
 const playerResult = document.getElementById('playerResults')
 const computerResult = document.getElementById('computerResults')
-
 let playerScore = 0;
 let computerScore = 0;
 
 // Animate Text in the gameRules paragraph 
 var i = 0;
-var txt = 'Welcome to a friendly game of Rock, Paper, Scissor. \nFirst to 5 wins. Click below to make your choice!'; /* The text */
+var txt = 'Welcome to a friendly game of Rock, Paper, Scissor. First to 5 wins. Choose your weapon below!'; /* The text */
 var speed = 50; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
@@ -19,6 +18,7 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
+
 
 
 function computerPlay() {
