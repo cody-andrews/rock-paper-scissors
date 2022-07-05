@@ -58,6 +58,10 @@ p   {
     justify-content: center;
 }
 
+.img    {
+    text-decoration: none;
+    color: #ffe6b6;
+}
 
 #roundResults    {
     display: flex;
