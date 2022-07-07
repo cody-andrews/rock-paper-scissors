@@ -26,6 +26,7 @@ header  {
     font-size: 1.5em;
     font-family: Arial, Geneva, Helvetica, sans-serif;    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 body    {
@@ -52,9 +53,9 @@ p   {
 }
 
     footer {
-        /* position:fixed;
-        bottom:0px; */
-
+        position: absolute;
+        bottom: -50px;
+        left: 0;
         display: flex;
         align-items: center;
         justify-content: center;
