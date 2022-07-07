@@ -2,25 +2,43 @@
     margin: 0px;
 }
 
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  flex-wrap: wrap;
+
+}
+
 main    {
-    flex: 1 0 auto; /* allows the content to grow but not shrink */
+        flex: 1 1 auto; /* allows the content to grow but not shrink */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      
 }
 
 header  {
-    padding: 24px 16px;
+    padding: 2em 1.5em;
     background-color: #161b33;
     color: #ffe6b6;
-    font-size: 40px;
+    font-size: 1.5em;
     font-family: Arial, Geneva, Helvetica, sans-serif;    display: flex;
     justify-content: center;
 }
 
 body    {
-    
+    flex: 1 1 auto;
+    min-height: 100vh;
     display: flexbox;
     flex-direction: column; /* creates rows out of the elements main and footer */
     background-color: #53ccec;
     color: #ffe6b6;
+}
+
+div {
+    flex: 2;
 }
 
 p   {
@@ -34,8 +52,9 @@ p   {
 }
 
     footer {
-        position:fixed;
-        bottom:0px;
+        /* position:fixed;
+        bottom:0px; */
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -46,12 +65,13 @@ p   {
 
 
 .optionBtn  {
-    margin: 5em;
+    margin: 7em;
     display: flex;
     justify-content: center;
 }
 
 .results    {
+    margin: 2em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -64,10 +84,11 @@ p   {
 }
 
 #roundResults    {
+    margin: 2em;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
 }
 
 #gameRules {
